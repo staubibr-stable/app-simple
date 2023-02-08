@@ -130,6 +130,10 @@ export default class AppSimple extends Application {
 	on_button_download_click(ev) {		
 		if (this.files.cd_ma && this.files.cd_log) {
 			var files = [this.configuration.to_file()];
+		}		
+		
+		if (this.files.cd_ma && this.files.cadmium_state && this.files.cadmium_output) {
+			var files = [this.configuration.to_file(), this.files.diagram];
 		}
 		
 		else {
